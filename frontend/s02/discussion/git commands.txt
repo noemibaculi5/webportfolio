@@ -1,0 +1,67 @@
+Git commands
+
+(Extra Commands) - optional
+
+CLI = Command Line Interface
+
+CLI is a console or text-based represenration which a user types commands in a terminal
+
+pwd - present working directory - shows the current folder we are working on
+
+ls - list the files and folders contained by the current directory
+
+mkdir <folderName> - creates a new directory
+
+cd <folderName> - change directories
+
+touch <fileName> - used to create files
+
+cd - (go back one directory
+______
+
+cd .. - (one folder up)
+
+rm <name of the file> - to delete file
+
+rmdir <name of the folder> - to delete an empty directory
+
+rm -r <directory_name> - This command will remove the specified directory and its contents recursively. It will prompt you for confirmation before deleting each file.
+
+rm -rf <directory_name> - This command will forcefully remove the specified directory and its contents without any confirmation prompts. Use this with caution, as it does not provide a chance to recover deleted data.
+
+______
+
+SSH Commands
+
+ssh-keygen = creating an ssh key
+
+(for windows) cat ~/.ssh/id_rsa.pub | clip = copying the generated ssh key
+(for mac) pbcopy < ~/.ssh/id_rsa.pub
+
+Configure the global user:
+ git config --global user.email "[git account email address]"
+
+    example:
+        git config --global user.email "john.doe@mail.com"
+
+
+Configure the global username:
+git config --global user.name "[git account username]"
+
+    example:
+        git config --global user.name "johndoe"
+
+________
+
+*Important Commands
+For pushing updates in our remote repository
+
+git add . (all)
+git add <filename> (specific)
+
+git commit -m "message"
+
+git push origin <branchName>
+example:
+	git push origin main
+	git push origin master
