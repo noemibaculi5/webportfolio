@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude AI</title>
+
+  
+</head>
+
+<body>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions for gradients and patterns -->
+  <defs>
+    <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFF59D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD54F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA726;stop-opacity:1" />
+    </radialGradient>
+    
+    <linearGradient id="panelGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D47A1;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="batteryGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#43A047;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66BB6A;stop-opacity:1" />
+    </linearGradient>
+    
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#FF6F00" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#F5F5F5"/>
+  
+  <!-- Sun -->
+  <circle cx="120" cy="100" r="50" fill="url(#sunGradient)" stroke="#F57C00" stroke-width="2"/>
+  <g id="rays">
+    <line x1="120" y1="30" x2="120" y2="10" stroke="#FFB300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="170" y1="50" x2="185" y2="35" stroke="#FFB300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="190" y1="100" x2="210" y2="100" stroke="#FFB300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="170" y1="150" x2="185" y2="165" stroke="#FFB300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="120" y1="170" x2="120" y2="190" stroke="#FFB300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="70" y1="150" x2="55" y2="165" stroke="#FFB300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="50" y1="100" x2="30" y2="100" stroke="#FFB300" stroke-width="3" stroke-linecap="round"/>
+    <line x1="70" y1="50" x2="55" y2="35" stroke="#FFB300" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="120" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#F57C00">Sunlight</text>
+  <text x="120" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#666">(Photons)</text>
+  
+  <!-- Arrow 1: Sunlight to Current -->
+  <path d="M 200 100 L 310 100" stroke="#FF6F00" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="255" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FF6F00" font-style="italic">Conversion</text>
+  
+  <!-- Solar Panel / Current Stage -->
+  <rect x="320" y="50" width="120" height="100" fill="url(#panelGradient)" stroke="#0D47A1" stroke-width="2" rx="5"/>
+  <g id="panelGrid">
+    <line x1="380" y1="50" x2="380" y2="150" stroke="#1976D2" stroke-width="1"/>
+    <line x1="320" y1="90" x2="440" y2="90" stroke="#1976D2" stroke-width="1"/>
+    <line x1="320" y1="110" x2="440" y2="110" stroke="#1976D2" stroke-width="1"/>
+  </g>
+  <text x="380" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0D47A1">Current (DC)</text>
+  <text x="380" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#666">(Electrons)</text>
+  
+  <!-- Arrow 2: Current to Usable Power -->
+  <path d="M 470 100 L 580 100" stroke="#FF6F00" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="525" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FF6F00" font-style="italic">Regulation</text>
+  
+  <!-- Battery / Usable Power -->
+  <rect x="590" y="60" width="80" height="80" fill="url(#batteryGradient)" stroke="#2E7D32" stroke-width="2" rx="5"/>
+  <rect x="605" y="75" width="50" height="50" fill="none" stroke="#fff" stroke-width="2"/>
+  <rect x="612" y="85" width="36" height="10" fill="#fff"/>
+  <rect x="612" y="100" width="36" height="10" fill="#fff"/>
+  <rect x="612" y="115" width="36" height="10" fill="#fff"/>
+  <text x="630" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2E7D32" font-weight="bold">+</text>
+  <text x="630" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#2E7D32" font-weight="bold">−</text>
+  
+  <text x="630" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2E7D32">Usable Power</text>
+  <text x="630" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#666">(AC/DC)</text>
+  
+  <!-- Info boxes -->
+  <g id="infoBox1">
+    <rect x="20" y="300" width="230" height="80" fill="#FFF3E0" stroke="#FF9800" stroke-width="2" rx="5"/>
+    <text x="135" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#E65100">Photovoltaic Effect</text>
+    <text x="135" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Sunlight hits solar cells,</text>
+    <text x="135" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">creating electron flow</text>
+    <text x="135" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">(direct current)</text>
+  </g>
+  
+  <g id="infoBox2">
+    <rect x="285" y="300" width="230" height="80" fill="#E3F2FD" stroke="#2196F3" stroke-width="2" rx="5"/>
+    <text x="400" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0D47A1">Charge Controller</text>
+    <text x="400" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Regulates voltage/current</text>
+    <text x="400" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">to safely charge batteries</text>
+    <text x="400" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">or power devices</text>
+  </g>
+  
+  <g id="infoBox3">
+    <rect x="550" y="300" width="230" height="80" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2" rx="5"/>
+    <text x="665" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1B5E20">Inverter (Optional)</text>
+    <text x="665" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Converts DC to AC power</text>
+    <text x="665" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">for household appliances</text>
+    <text x="665" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">and grid connection</text>
+  </g>
+</svg>
+
+</body>
+</html>
